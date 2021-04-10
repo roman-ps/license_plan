@@ -1,0 +1,24 @@
+{
+  "name": "license-plan",
+  "version": "1.0.0",
+  "description": "Тестовое задание от Daminion Software",
+  "main": "index.js",
+  "scripts": {
+    "start": "browser-sync start --server 'source' --files \"**/*.*\"",
+    "test": "eslint source/js/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roman-ps/license_plan.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/roman-ps/license_plan/issues"
+  },
+  "homepage": "https://github.com/roman-ps/license_plan#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.14",
+    "eslint": "^7.24.0"
+  }
+}

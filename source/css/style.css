@@ -1,3 +1,7 @@
+body {
+  font-family: 'Arial', 'Helvetica', sans-serif;
+}
+
 .content {
   position: relative;
 }
@@ -20,8 +24,7 @@
 }
 
 .form__item {
-  font-size: 30px;
-  text-transform: uppercase;
+  font-size: 24px;
   padding-left: 40px;
   margin: 20px 0;
 }
@@ -31,7 +34,8 @@ input[type=radio] {
 }
 
 input[type=radio]+label {
-  display: block;
+  display: flex;
+  justify-content: space-between;
   position: relative;
   cursor: pointer;
 }
@@ -75,5 +79,7 @@ input[type=radio]:checked+label::before {
 }
 
 .form__label {
-  width: 100%;
+  /* display: flex; */
+  /* justify-content: space-between; */
+  /* width: 100%; */
 }

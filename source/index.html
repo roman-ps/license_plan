@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,41 +8,36 @@
   <title>План лицензий</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
   <div class="content">
     <form class="form content__form" action="" method="POST" id="form">
-      <div class="form__item">
-        <input type="radio" id="radio1" name="radio">
-        <label for="radio1" class="form__label">License plan 1</label>
-      </div>
-      <div class="form__item">
-        <input type="radio" id="radio2" name="radio">
-        <label for="radio2" class="form__label">License plan 2</label>
-      </div>
-      <div class="form__item">
-        <input type="radio" id="radio3" name="radio">
-        <label for="radio3" class="form__label">License plan 3<span>per license</span></label>
+      <div class="catalog">
+
       </div>
       <hr>
       <label for="count" class="form__label-number">Number of License</label>
-      <input type="number" id="count" class="count" name="count">
+      <input type="number" id="count" class="form__count" name="count" min="1" required>
       <hr>
       <div class="form__bottom-container">
-        <p class="form__total">Total: $<span class="fprm__total-price">340</span>us</p>
+        <p class="form__total">Total: $ <span class="form__total-price"></span></p>
         <button type="submit" class="form__submit">Buy now</button>
-        <p class="form__selected">Selected plan: <span class="form__selected-plan">#3</span></p>
+        <p class="form__selected">Selected plan: <span class="form__selected-plan"></span></p>
       </div>
     </form>
   </div>
 
-  <template id="template">
+  <template id="tmpl">
     <div class="form__item">
-      <input type="radio" id="radio3" name="radio">
-      <label for="radio3" class="form__label">License plan 3<span>per license</span></label>
+      <input class="form__input" type="radio" id="radio" name="radio">
+      <label class="form__label" for="radio">
+        License plan <span class="form__label-name"></span><span class="form__label-price"></span>per license
+      </label>
     </div>
   </template>
 
   <script src="js/index.js" type="module"></script>
 </body>
+
 </html>

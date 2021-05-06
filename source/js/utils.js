@@ -9,4 +9,8 @@ const getNodes = (parent, selectors) => {
   return nodes;
 };
 
-export {getNodes}
+const calculateTotalPrice = (plan, count) => {
+  
+}
+
+export {getNodes, calculateTotalPrice}

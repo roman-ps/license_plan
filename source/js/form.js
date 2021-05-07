@@ -1,23 +1,25 @@
 import {calculateTotalPrice} from './utils.js';
 
 const PlanPrices = {
-  radio1: '5',
-  radio2: '10',
-  radio3: '20',
-  radio4: '45',
-  radio5: '130',
-}
+  start: '5',
+  standart: '10',
+  gold: '20',
+  premium: '45',
+  VIP: '130',
+};
 
 const FORM = document.querySelector('.form');
-const INPUT_COUNT = document.querySelector('.form__count');
+const INPUT_COUNT = FORM.querySelector('.form__count');
 
 const formChangeHandler = (evt) => {
   const attr = evt.target.getAttribute('id');
-  const price = PlanPrices[attr];
-  // const parent = evt.target.closest('.form__item');
-  // const priceItem = parent.querySelector('.form__label-price').textContent;
+  let price = +PlanPrices[attr];
   console.log(attr)
   console.log(price)
+};
+
+const inputChangeHandler = () => {
+  
 }
 
 const addEventListeners = () => {

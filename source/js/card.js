@@ -13,7 +13,7 @@ const fillCard = (data) => {
   const card = CARD_TEMPLATE.content.cloneNode(true);
   const cardNodes = getNodes(card, Selectors);
   const {INPUT, LABEL, NAME, PRICE} = cardNodes;
-  const cardId = `radio${data.id}`;
+  const cardId = data.name;
 
   INPUT.id = cardId;
   LABEL.setAttribute('for', cardId)

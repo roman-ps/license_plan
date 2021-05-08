@@ -10,7 +10,7 @@ const getNodes = (parent, selectors) => {
 };
 
 const calculateTotalPrice = (plan, count) => {
-  
+  return plan * count;
 }
 
 export {getNodes, calculateTotalPrice}

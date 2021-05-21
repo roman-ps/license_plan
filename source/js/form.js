@@ -10,7 +10,7 @@ const PlanPrices = {
   standart: 10,
   gold: 20,
   premium: 45,
-  VIP: 130,
+  vip: 130,
 };
 
 let totalPrice = 0;
@@ -22,7 +22,7 @@ const renderTotalPrice = () => {
 
 const renderSelectedPlan = () => {
   SELECTED_PLAN_CONTAINER.textContent = selectedPlan;
-}
+};
 
 const formRadioChangeHandler = (evt) => {
   const id = evt.target.getAttribute('id');

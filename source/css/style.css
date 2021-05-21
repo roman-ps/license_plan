@@ -1,3 +1,11 @@
+:root {
+  --font-size-label: 24px;
+  --label-before-size: var(--font-size-label);
+  --label-after-size: calc(var(--label-before-size) / 2.2);
+  --label-after-top: calc(var(--label-before-size) / 3);
+  --input-border-color: #006080;
+}
+
 body {
   font-family: 'Arial', 'Helvetica', sans-serif;
 }
@@ -24,9 +32,13 @@ body {
 }
 
 .form__item {
-  font-size: 24px;
+  font-size: var(--font-size-label);
   padding-left: 40px;
   margin: 20px 0;
+}
+
+.form__label-price {
+  text-align: center;
 }
 
 input[type=radio] {
@@ -34,13 +46,13 @@ input[type=radio] {
 }
 
 input[type=radio]+label {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 170px auto 70px 120px;
   position: relative;
   cursor: pointer;
 }
 
-input[type=radio]+label::before:hover {
+input[type=radio]+label:hover::before {
   border: 2px solid #000000;
 }
 
@@ -48,8 +60,8 @@ input[type=radio]+label::before {
   display: block;
   position: absolute;
   content: '';
-  width: 26px;
-  height: 26px;
+  width: var(--label-before-size);
+  height: var(--label-before-size);
   border: 2px solid #e5e5e5;
   border-radius: 50%;
   background-color: #fff;
@@ -57,29 +69,19 @@ input[type=radio]+label::before {
   left: -40px;
 }
 
-input[type=radio]:checked+label:: {
-  border: 2px solid red;
-}
-
 input[type=radio]:checked+label::after {
   display: block;
   position: absolute;
   content: '';
-  background-color: #006080;
+  background-color: var(--input-border-color);
   border-radius: 50%;
-  width: 12px;
-  height: 12px;
-  top: 9px;
+  width: var(--label-after-size);
+  height: var(--label-after-size);
+  top: var(--label-after-top);
   left: -31px;
 }
 
 input[type=radio]:checked+label::before {
-  border: 2px solid #006080;
+  border: 2px solid var(--input-border-color);
   background-color: transparent;
-}
-
-.form__label {
-  /* display: flex; */
-  /* justify-content: space-between; */
-  /* width: 100%; */
 }

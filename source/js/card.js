@@ -17,8 +17,8 @@ const fillCard = (data) => {
 
   INPUT.id = cardId;
   LABEL.setAttribute('for', cardId)
-  NAME.textContent = data.name;
-  PRICE.textContent = data.price;
+  NAME.textContent = `License plan #${data.name}`;
+  PRICE.textContent = `$${data.price} per license`;
 
   return card;
 }

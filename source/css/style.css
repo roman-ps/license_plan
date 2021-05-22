@@ -4,6 +4,17 @@
   --label-after-size: calc(var(--label-before-size) / 2.2);
   --label-after-top: calc(var(--label-before-size) / 3);
   --input-border-color: #006080;
+  --font-color-license: #b8b8b8;
+}
+
+@font-face {
+  font-family: "Bebas";
+  font-weight: 400;
+  font-style: normal;
+  src: local("BebasNeue-regular"),
+    url("../fonts/bebas.woff2") format("woff2"),
+    url("../fonts/bebas.woff") format("woff");
+  font-display: swap;
 }
 
 body {
@@ -37,8 +48,12 @@ body {
   margin: 20px 0;
 }
 
+.form__label-name {
+  font-family: 'Bebas', 'Arial', sans-serif;
+}
+
 .form__label-price {
-  text-align: center;
+  color: var(--font-color-license);
 }
 
 input[type=radio] {
@@ -46,8 +61,8 @@ input[type=radio] {
 }
 
 input[type=radio]+label {
-  display: grid;
-  grid-template-columns: 170px auto 70px 120px;
+  display: flex;
+  justify-content: space-between;
   position: relative;
   cursor: pointer;
 }
